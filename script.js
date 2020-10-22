@@ -49,7 +49,6 @@ function imageLoaded() {
   if (imagesLoaded === totalImages) {
     ready = true;
     loader.hidden = true;
-    console.log(ready);
   }
 }
 
@@ -79,7 +78,6 @@ function displayPhotos() {
     a.append(img);
     imgContainer.append(a);
     sliderImages = document.querySelectorAll("img");
-    console.log(sliderImages);
   });
 }
 
@@ -111,7 +109,6 @@ function debounce(func, wait = 5, immediate = true) {
 }
 
 function checkSlide() {
-  console.log("hi");
   sliderImages.forEach((sliderImage) => {
     // half way through the image
     const slideInAt =
@@ -121,7 +118,6 @@ function checkSlide() {
     const isHalfShown =
       slideInAt > sliderImage.offsetTop - sliderImage.offsetHeight / 3;
     const isNotScrolledPast = window.scrollY < imageBottom;
-    console.log(slideInAt, imageBottom);
     if (isHalfShown && isNotScrolledPast) {
       sliderImage.classList.add("active");
     } else {
