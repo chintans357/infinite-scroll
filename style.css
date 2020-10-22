@@ -55,6 +55,10 @@ img {
   transition: all 0.5s;
 }
 
+.loaderImg {
+  opacity: 1;
+}
+
 .image-container a:nth-of-type(2n) img {
   transform: translateX(-30%) scale(0.95);
 }
